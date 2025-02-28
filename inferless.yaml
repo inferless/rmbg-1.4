@@ -1,7 +1,7 @@
 # Inferless config file (version: 1.0.0)
 version: 1.0.0
 
-name: rmbg-1.4
+name: rmbg-1-4
 import_source: GIT
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
