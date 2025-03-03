@@ -1,12 +1,15 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 from transformers import pipeline
-
 from io import BytesIO
 import base64
-import os
 
 class InferlessPythonModel:
     def initialize(self):
-        self.pipe = pipeline("image-segmentation", model="briaai/RMBG-1.4", trust_remote_code=True)
+        model_id = "briaai/RMBG-1.4"
+        snapshot_download(repo_id=model_id,allow_patterns=["*.safetensors"])
+        self.pipe = pipeline("image-segmentation", model=model_id, trust_remote_code=True)
 
     def infer(self, inputs):
         image_url = inputs["image_url"]
