@@ -3,6 +3,6 @@ INPUT_SCHEMA = {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
-        'example': ["https://www.godrejinterio.com/imagestore/B2C/56101543SD00165/56101543SD00165_A2_803x602.jpg"]
+        'example': ["https://raw.githubusercontent.com/rbgo404/Files/main/dog.jpg"]
     }
 }
